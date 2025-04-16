@@ -1,0 +1,334 @@
+@import "tailwindcss";
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --background: #0a0a0a; */
+    --background: #636363;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+:root {
+  --background: #000000;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --background: #0a0a0a; */
+    --background: #000000;
+    --foreground: #000000;
+  }
+}
+:root {
+  --font-geist-sans: "Geist Sans", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+  --font-bigger: "Bigger Display", sans-serif;
+  --font-PPNeue: "PPNeueMontreal", sans-serif;
+  --font-font2: "font-font2", sans-serif;
+}
+
+.font-geist {
+  font-family: var(--font-geist-sans);
+}
+.font-bigger {
+  font-family: var(--font-bigger);
+}
+
+.font-PPNeue {
+  font-family: var(--font-PPNeue);
+}
+
+.font-font2 {
+  font-family: var(--font-font2);
+}
+
+.animated-copy [class^="line-"] {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.animated-copy [class^="line-inner-"] {
+  position: relative;
+  display: block;
+  will-change: transform;
+}
+.canvas-container {
+  width: 100%;
+  height: 600px; /* default height for desktop */
+}
+@media (max-width: 768px) {
+  .canvas-container {
+    height: 64px; /* height for mobile screens */
+  }
+}
+
+
+
+
+
+
+
+.circle {
+  -webkit-mask-image: radial-gradient(
+    ellipse,
+    black 1%,
+    rgba(0, 0, 0, 0.5) 50%
+  );
+  backdrop-filter: blur(300px);
+  mask-image: radial-gradient(ellipse, black 2%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.triangle-blur-front {
+  /* The container itself has no intrinsic size */
+  width: 0;
+  height: 0;
+  /* Create a triangle using borders */
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-bottom: 700px solid #09e3f3; /* Change color as needed */
+  /* Apply the blur filter */
+  filter: blur(200);
+  /* Optional: adjust positioning */
+  position: absolute;
+  top: 10%;
+}
+
+.triangle-blur {
+  /* The container itself has no intrinsic size */
+  width: 0;
+  height: 0;
+  /* Create a triangle using borders */
+  border-left: 300px solid transparent;
+  border-right: 300px solid transparent;
+  border-bottom: 1000px solid #02deee; /* Change color as needed */
+  /* Apply the blur filter */
+  filter: blur(100);
+  /* Optional: adjust positioning */
+  position: absolute;
+  top: -20%;
+}
+
+.triangle-blur-left {
+  /* The container itself has no intrinsic size */
+  width: 0;
+  height: 0;
+
+  /* Create a triangle using borders */
+  border-left: 100px solid transparent;
+  border-right: 200px solid transparent;
+  border-bottom: 1200px solid transparent;
+  border-image: linear-gradient(to bottom, #22d3ee, rgba(34, 211, 238, 0.8)) 1; /* Change color as needed */
+  filter: blur(100);
+  /* Optional: adjust positioning */
+  position: absolute;
+  top: -10%;
+  left: 40%;
+  transform: translate(-50%, 0%);
+}
+.triangle-blur-right {
+  /* The container itself has no intrinsic size */
+  width: 0;
+  height: 0;
+  filter: blur(150);
+  /* Create a triangle using borders */
+  border-left: 10px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 1000px solid transparent;
+  border-image: linear-gradient(to bottom, #22d3ee, rgba(34, 211, 238, 0.8)) 1; /* Change color as needed */
+
+  /* Optional: adjust positioning */
+  position: absolute;
+  top: -20%;
+  left: 60%;
+  transform: translate(-50%, 0%);
+}
+
+.triangle-blur-mid {
+  /* The container itself has no intrinsic size */
+  width: 0;
+  height: 0;
+  filter: blur(100px);
+
+  /* Create a triangle using borders */
+  border-left: 10px solid transparent;
+  border-right: 100px solid transparent;
+  /* Default mobile border-bottom set to 2000px */
+  border-bottom: 2100px solid transparent;
+
+  border-image: linear-gradient(to bottom, #22d3ee, rgba(34, 211, 238, 0.8)) 1;
+
+  /* Positioning */
+  position: absolute;
+  top: -20%;
+  left: 60%;
+  transform: translate(-50%, 0%);
+}
+
+/* For screens md (768px and up), change border-bottom */
+@media (min-width: 768px) {
+  .triangle-blur-mid {
+    border-bottom: 1000px solid transparent;
+    filter: blur(300px);
+  }
+}
+
+.triangle-blur-form1 {
+  width: 0;
+  height: 0;
+
+  /* Create a triangle using borders */
+  border-left: 100px solid transparent;
+  border-right: 80px solid transparent;
+  /* Default mobile border-bottom set to 2000px */
+  border-bottom: 550px solid transparent;
+
+  border-image: linear-gradient(to bottom, #94f4ff, rgba(34, 211, 238, 0.8)) 1;
+  filter: blur(60px);
+  /* Positioning */
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(60%, 40%);
+}
+
+.triangle-blur-form2-4 {
+  width: 0;
+  height: 0;
+
+  /* Create a triangle using borders */
+  border-left: 100px solid transparent;
+  border-right: 60px solid transparent;
+  /* Default mobile border-bottom set to 2000px */
+  border-bottom: 500px solid #137e8a;
+
+  filter: blur(70px);
+  /* Positioning */
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(60%, 40%);
+}
+
+.triangle-blur-form3 {
+  width: 0;
+  height: 0;
+
+  /* Create a triangle using borders */
+  border-left: 100px solid transparent;
+  border-right: 80px solid transparent;
+  /* Default mobile border-bottom set to 2000px */
+  border-bottom: 550px solid transparent;
+  border-image: linear-gradient(to bottom, #ffffff, #4ddbeb) 1;
+  filter: blur(50px);
+  /* Positioning */
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(60%, 40%);
+}
+
+.triangle-blur-form5 {
+  width: 0;
+  height: 0;
+
+  /* Create a triangle using borders */
+  border-left: 100px solid transparent;
+  border-right: 80px solid transparent;
+  /* Default mobile border-bottom set to 2000px */
+  border-bottom: 550px solid transparent;
+
+  border-image: linear-gradient(to top, #003c43, #4ddbeb) 1;
+  filter: blur(50px);
+  /* Positioning */
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  transform: translate(60%, 40%);
+}
+
+.triangle-shadow-form {
+  width: 0;
+  height: 0;
+
+  /* Create a triangle using borders */
+  border-left: 10px solid transparent;
+  border-right: 40px solid transparent;
+  /* Default mobile border-bottom set to 2000px */
+  border-bottom: 500px solid black;
+  filter: blur(30px);
+  /* Positioning */
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, 0%);
+}
+
+.triangle-shadow-features {
+  width: 0;
+  height: 0;
+  /* Create a triangle using borders */
+  border-left: 50px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 500px solid #000000; /* Change color as needed */
+  /* Apply the blur filter */
+  filter: blur(55px);
+  /* Optional: adjust positioning */
+  position: absolute;
+  top: -13%;
+}
+@keyframes slideY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+}
+
+.animate-shadow-y {
+  animation: slideY 6s ease-in-out infinite;
+}
+
+@keyframes slideX {
+  0%,
+  100% {
+    transform: translateX(-100px) rotate(-25deg);
+  }
+  50% {
+    transform: translateX(300px) rotate(20deg);
+  }
+}
+
+.animate-slide-X {
+  animation: slideX 20s ease-in-out infinite;
+}

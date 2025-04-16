@@ -1,0 +1,147 @@
+
+
+nav, .menu-overlay-bar, .menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  
+  backdrop-filter: blur(10px);
+
+}
+
+.menu-overlay {
+  position: fixed;
+  height: 100svh;
+  background-color: white;
+  color: black;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  will-change: clip-path;
+  pointer-events: none;
+  padding-top: 16vh;
+  align-items: start;
+  
+  z-index: 2;
+  
+}
+
+
+nav a,
+nav p,
+.menu-overlay-bar a,
+.menu-overlay-bar p,
+.showreel a,
+.media-link a {
+  position: relative;
+  /* color: var(--copy); */
+  display: block;
+  will-change: transform;
+  user-select: none;
+  
+}
+
+.logo,
+.menu-toggle-open,
+.menu-toggle-close,
+.media-link {
+  position: relative;
+  width: max-content;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+.menu-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  gap: 1em;
+}
+
+nav a,
+.menu-toggle-open p {
+  transform: translateY(0px);
+  
+}
+
+.menu-overlay-bar a,
+.showreel a,
+.media-link a {
+  transform: translateY(20px);
+}
+
+.menu-toggle-close{
+  transform: translateY(100%);
+  height: 100%;
+}
+
+
+
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  font-weight: semibold;
+  letter-spacing: -1px;
+  
+}
+
+.menu-link {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menu-link a {
+  position: relative;
+  display: inline-block;
+  transform: translateY(100%);
+  will-change: transform;
+  
+}
+
+.menu-overlay h1 {
+  font-size: 3vw;
+}
+
+.menu-toggle-open,
+.menu-toggle-close {
+  width: 20px;
+}
+
+
+
+
+@media (max-width: 900px) {
+  .menu-overlay h1 {
+    font-size: 10vw;
+  }
+}
+
+
