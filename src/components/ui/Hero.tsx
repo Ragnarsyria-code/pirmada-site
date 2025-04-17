@@ -16,7 +16,7 @@ const Hero = () => {
       {/* Absolutely placed button container */}
      
         <AnimatedLink
-          href="/ripple-gradient-2"
+          href="/#contact"
           variant="ripple"
           className="text-black absolute lg:bottom-2 bottom-24 bg-gradient-to-r from-[#4DEBB7] to-[#4BD4DF] rounded-full px-6 py-2"
           rippleCircleClassName="border-[#4BD4DF]"

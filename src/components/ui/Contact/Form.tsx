@@ -59,7 +59,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="mt-4 overflow-hidden py-16 border border-white/10 rounded-2xl md:rounded-4xl">
+    <section id="contact" className="mt-4 overflow-hidden py-16 border border-white/10 rounded-2xl md:rounded-4xl">
       <div className="w-[90vw] gap-12 mx-auto h-full grid grid-cols-1 lg:grid-cols-7 justify-center items-center">
         {/* Left Side */}
         <div className="col-span-7 md:w-[80%] h-full md:col-span-4">
@@ -74,8 +74,18 @@ const ContactSection: React.FC = () => {
             <p className="font-medium md:font-semibold text-md md:text-lg text-white/80">
               Reach Out Directly:
             </p>
-            <p className="text-teal-400 mt-2 md:mt-4">info@pirmada.com</p>
+            <div className="flex gap-2 mt-2 md:mt-4">
+              <p className="text-white/80 ">Email:</p>
+              <p className="text-teal-400 ">info@pirmada.com</p>
+              </div>
+              <div className="flex  gap-2 mt-2 md:mt-4">
+              <p className="text-white/80 ">Phone:</p>
+              <p className="text-teal-400 ">+971 508190026</p>
+              </div>
+           
           </div>
+
+          
         </div>
 
         {/* Right Side (Form) */}
