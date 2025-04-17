@@ -11,7 +11,7 @@ const Scene = () => {
 
       <Canvas shadows={false} dpr={[1, 1.5]} camera={{ position: [0, 0, 100], fov: 10 }}>
         <Suspense fallback={null}>
-          <Environment preset="sunset" />
+          <Environment preset="city" />
           <Model />
         </Suspense>
       </Canvas>
