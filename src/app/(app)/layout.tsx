@@ -41,7 +41,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       >
         <Nav />
         {children}
-        <Footer />
+       <Footer/>
       </body>
     </html>
   );

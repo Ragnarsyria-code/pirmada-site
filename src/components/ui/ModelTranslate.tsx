@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useRef, useState, useEffect, useMemo } from "react";
 import * as THREE from "three";
@@ -159,7 +160,6 @@ const Model = () => {
         </Center>
       </group>
 
-      {/* A single Text element with a line break, centered horizontally & vertically */}
       <Text
         // Choose a position so that the text is in view; 
         // anchorY="middle" means the text will be centered around this Y.
@@ -213,3 +213,5 @@ const Model = () => {
 };
 
 export default Model;
+
+

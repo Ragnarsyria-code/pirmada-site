@@ -229,17 +229,17 @@ const Nav = () => {
 
   return (
     <>
-    <header className="position-relative h-[10vh]">
+    <header className="position-relative h-[80px] md:h-[144px]">
       <nav ref={navRef}>
         <div className="logo">
-          <a href="/" onClick={(e) => handleNavigation(e, "/")}>
+          <link href="/" onClick={(e) => handleNavigation(e, "/")}>
             <Image
               src="/assets/logo.svg"
               alt="Pirmada Logo"
               width={150}
               height={100}
             />
-          </a>
+          </link>
         </div>
         <div className="menu-toggle-open" ref={menuOpenBtnRef}>
           <Image
@@ -255,9 +255,9 @@ const Nav = () => {
       <div className="menu-overlay" ref={menuOverlayRef}>
         <div className="menu-overlay-bar" ref={menuOverlayBarRef}>
           <div className="logo">
-            <a href="/" onClick={(e) => handleNavigation(e, "/")}>
+            <Link href="/" aria-label="home" onClick={(e) => handleNavigation(e, "/")}>
               
-            </a>
+            </Link>
           </div>
           <div className="menu-toggle-close" ref={menuCloseBtnRef}>
             <Image
@@ -272,43 +272,43 @@ const Nav = () => {
 
         <div className="menu-footer" ref={menuFooterRef}>
           <div className="media-link">
-            <a href="https://api.whatsapp.com/send?phone=971508190026">Whatsapp</a>
+            <Link href="https://api.whatsapp.com/send?phone=971508190026">Whatsapp</Link>
           </div>
           <div className="socials">
             <div className="media-link">
-              <a href="https://www.instagram.com/">Instagram</a>
+              <Link href="https://www.instagram.com/">Instagram</Link>
             </div>
             <div className="media-link">
-              <a href="https://x.com/PirmadaOfficial">X</a>
+              <Link href="https://x.com/PirmadaOfficial">X</Link>
             </div>
           </div>
         </div>
 
         <div className="menu-links">
           <div className="menu-link">
-            <a href="/" onClick={(e) => handleNavigation(e, "/")}>
+            <Link href="/" onClick={(e) => handleNavigation(e, "/")}>
               <h1>Home</h1>
-            </a>
+            </Link>
           </div>
           <div className="menu-link">
-            <a href="/about" onClick={(e) => handleNavigation(e, "/about")}>
+            <Link href="/about" onClick={(e) => handleNavigation(e, "/about")}>
               <h1>About us</h1>
-            </a>
+            </Link>
           </div>
           <div className="menu-link">
-            <a href="/work" onClick={(e) => handleNavigation(e, "/work")}>
+            <Link href="/work" onClick={(e) => handleNavigation(e, "/work")}>
               <h1>Services</h1>
-            </a>
+            </Link>
           </div>
           <div className="menu-link">
-            <a href="/work" onClick={(e) => handleNavigation(e, "/work")}>
+            <Link href="/work" onClick={(e) => handleNavigation(e, "/work")}>
               <h1>Work</h1>
-            </a>
+            </Link>
           </div>
           <div className="menu-link">
-            <a href="/contact" onClick={(e) => handleNavigation(e, "/contact")}>
+            <Link href="/contact" onClick={(e) => handleNavigation(e, "/contact")}>
               <h1>Contact</h1>
-            </a>
+              </Link>
           </div>
         </div>
       </div>

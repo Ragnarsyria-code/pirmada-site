@@ -5,6 +5,14 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+@layer utilities {
+  .bg-grid {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.318) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.318) 1px, transparent 1px);
+    background-size: 100px 100px;
+  }
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -201,6 +209,28 @@ body {
   }
 }
 
+
+.triangle-blur-mobile {
+  /* The container itself has no intrinsic size */
+  width: 0;
+  height: 0;
+  filter: blur(100px);
+
+  /* Create a triangle using borders */
+  border-left: 10px solid transparent;
+  border-right: 100px solid transparent;
+  /* Default mobile border-bottom set to 2000px */
+  border-bottom: 2700px solid transparent;
+
+  border-image: linear-gradient(to bottom, #22d3ee, rgba(34, 211, 238, 0.8)) 1;
+
+  /* Positioning */
+  position: absolute;
+  top: -20%;
+  left: 60%;
+  transform: translate(-50%, 0%);
+}  
+
 .triangle-blur-form1 {
   width: 0;
   height: 0;
@@ -332,3 +362,4 @@ body {
 .animate-slide-X {
   animation: slideX 20s ease-in-out infinite;
 }
+

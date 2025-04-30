@@ -19,8 +19,8 @@ const Footer: React.FC = () => {
     <footer className="bg-black py-4 px-4  text-white relative flex flex-col items-center">
  
       {/* Footer Header Area */}
-      <div className="relative w-full h-[50vh] flex items-center justify-center">
-        {/* Background Image */}
+      <div className="relative w-full xs:h-[333.5px] h-[422px] md:h-[333px]  flex items-center justify-center">
+        
         <div className="abosolute inset-0">
           <Image
             src="/assets/footer-bg.png"

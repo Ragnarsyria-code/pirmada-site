@@ -27,14 +27,16 @@ const textRevealEase = CustomEase.create("textRevealEase", "0.625, 0.05, 0, 1");
 const getBaseClasses = (tag: string): string => {
   switch (tag) {
     case "p":
-      return "animated-copy  mt-4 text-white/60 text-sm md:text-base md:font-medium";
+      return "animated-copy  mt-4 text-white/60 text-sm md:text-base ";
     case "h1":
       return "animated-copy whitespace-pre-line leading-[1.1em] text-white text-4xl md:text-6xl font-semibold tracking-[-0.9px]";
     case "h2":
       return "animated-copy text-white text-3xl md:text-4xl font-semibold tracking-[-0.9px]";
+      case "h3":
+      return "animated-copy text-white text-xl whitespace-pre-line md:text-2xl font-medium tracking-[-0.9px] ";
     // Add further cases for other tags if needed.
     default:
-      return "animated-copy text-white leading-[1.2em] tracking-[-0.9px]";
+      return "animated-copy text-white text-4xl  md:text-8xl ";
   }
 };
 

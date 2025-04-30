@@ -255,7 +255,7 @@ const Nav: React.FC = () => {
         <div className="menu-overlay" ref={menuOverlayRef}>
           <div className="menu-overlay-bar" ref={menuOverlayBarRef}>
             <div className="logo">
-              <Link href="/" onClick={(e) => handleNavigation(e, "/")}>
+              <Link href="/"  aria-label="home" onClick={(e) => handleNavigation(e, "/")}>
                 {/* You can insert logo content here if needed */}
               </Link>
             </div>

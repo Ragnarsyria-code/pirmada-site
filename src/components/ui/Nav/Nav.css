@@ -9,7 +9,7 @@ nav, .menu-overlay-bar, .menu-overlay {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  z-index: 99;
 }
 
 nav {
@@ -30,17 +30,17 @@ nav {
   padding-top: 16vh;
   align-items: start;
   
-  z-index: 2;
+  z-index: 100;
   
 }
 
 
-nav a,
+nav Link,
 nav p,
-.menu-overlay-bar a,
+.menu-overlay-bar Link,
 .menu-overlay-bar p,
-.showreel a,
-.media-link a {
+.showreel Link,
+.media-link Link {
   position: relative;
   /* color: var(--copy); */
   display: block;

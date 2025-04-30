@@ -3,7 +3,7 @@ import AnimatedCopy from "./AnimatedCopy";
 
 interface SectionHeadingTextProps {
   miniTitle: string;
-  title: string;
+  title: React.ReactNode;
   description: string;
   alignment?: "left" | "center" | "right";
 }
@@ -26,7 +26,7 @@ const SectionHeadingText: React.FC<SectionHeadingTextProps> = ({
   return (
     <div className={`flex flex-col  ${alignmentClasses}`}>
       {/* Mini Title */}
-      <h6 className="text-xs  border border-white/20 font-medium uppercase text-white/70 px-4 md:px-6 py-2 rounded-md md:rounded-lg mb-4">
+      <h6 className="text-xs  border border-white/30 bg-black/10 backdrop-blur-2xl font-medium uppercase text-white/70 px-4 md:px-6 py-2 rounded-md md:rounded-lg mb-4">
         {miniTitle}
       </h6>
 
@@ -51,7 +51,7 @@ const SectionHeadingText: React.FC<SectionHeadingTextProps> = ({
         direction="bottom"
         className={`${
           alignment === 'left'
-            ? 'text-center md:text-left' : ''
+            ? 'text-center md:text-left ' : ''
         }`}
       >
         {description}

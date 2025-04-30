@@ -8,12 +8,12 @@ import nodemailer from "nodemailer";
 export async function POST(req: Request) {
   try {
     // Parse the request body and extract required fields
-    const { email, message, firstName, lastName, number } = await req.json();
-    if (!email || !message || !firstName || !lastName || !number) {
+    const { email, message, name, number } = await req.json();
+    if (!email || !message ||  !name || !number) {
       return NextResponse.json(
         {
           error:
-            "Email, message, first name, last name, and number are required",
+            "Email, message, name, and number are required",
         },
         { status: 400 }
       );
@@ -38,8 +38,8 @@ export async function POST(req: Request) {
       text: `New Contact Form Submission
 
 Sender Details:
-  First Name: ${firstName}
-  Last Name: ${lastName}
+   Name: ${name}
+ 
   Email: ${email}
   Phone Number: ${number}
 
@@ -58,13 +58,10 @@ Pirmada`,
           <h3 style="color: #222;">Sender Details</h3>
           <table style="width: 100%; border-collapse: collapse;">
             <tr>
-              <td style="padding: 8px; font-weight: bold;">First Name:</td>
-              <td style="padding: 8px;">${firstName}</td>
+              <td style="padding: 8px; font-weight: bold;"> Name:</td>
+              <td style="padding: 8px;">${name}</td>
             </tr>
-            <tr>
-              <td style="padding: 8px; font-weight: bold;">Last Name:</td>
-              <td style="padding: 8px;">${lastName}</td>
-            </tr>
+            
             <tr>
               <td style="padding: 8px; font-weight: bold;">Email:</td>
               <td style="padding: 8px;">${email}</td>

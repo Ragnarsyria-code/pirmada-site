@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import SectionHeadingText from "../SectionHeadingText";
+
+import AnimatedCopy from "../AnimatedCopy";
 
 const ContactSection: React.FC = () => {
   const [name, setName] = useState("");
@@ -59,16 +60,34 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="mt-4 overflow-hidden py-16 border border-white/10 rounded-2xl md:rounded-4xl">
+    <section id="contact" className="mt-24 overflow-hidden py-16 border border-white/10 rounded-2xl md:rounded-4xl">
       <div className="w-[90vw] gap-12 mx-auto h-full grid grid-cols-1 lg:grid-cols-7 justify-center items-center">
         {/* Left Side */}
         <div className="col-span-7 md:w-[80%] h-full md:col-span-4">
-        <SectionHeadingText
-        alignment="left"
-        miniTitle="Contact us"
-        title="Get in Touch with us"
-        description="Ignite explosive growth, fuel breakthrough innovation, and transform your business into a market leader. Connect with us now."
-      />
+
+           <AnimatedCopy
+                              tag="h1"
+                              delay={0.2}
+                              duration={1}
+                              stagger={0.05}
+                              direction="bottom"
+                              className=" max-w-xl text-center"
+                            >
+                           
+                           Get in Touch with us
+                            
+                                              
+                                </AnimatedCopy>
+                                <AnimatedCopy
+                                  tag="p"
+                                  delay={0.2}
+                                  duration={1}
+                                  stagger={0.05}
+                                  direction="bottom"
+                                  className=" text-[16px] md:text-xl md:text-start text-center max-w-md md:max-w-xl"
+                                >
+                              Ignite explosive growth, fuel breakthrough innovation, and transform your business into a market leader. Connect with us now.</AnimatedCopy>
+        
           {/* Reach Out Directly */}
           <div className="mt-8 md:mt-12">
             <p className="font-medium md:font-semibold text-md md:text-lg text-white/80">
@@ -89,7 +108,7 @@ const ContactSection: React.FC = () => {
         </div>
 
         {/* Right Side (Form) */}
-        <div className="relative col-span-7 lg:col-span-3  bg-[#2B2B2B]/60 ring-1 ring-white/20 rounded-[12px]">
+        <div className="relative col-span-7 lg:col-span-3  bg-[#0f0f0f] ring-1 ring-white/20 rounded-[12px]">
           <div className="p-4 pt-12 lg:p-6 lg:pt-12">
             {/* Logo */}
             <div className="flex flex-col items-center mb-6">
@@ -196,13 +215,13 @@ const ContactSection: React.FC = () => {
             {status && <p className="mt-2 text-center text-white">{status}</p>}
 
             {/* Decorative elements */}
-            <div>
+            <div className="">
               {/* Replace `-z-1` with `z-[-1]` and the bracket-based rotate classes. */}
               <div className="z-[-1] triangle-blur-form1 [transform:rotate(-20deg)]"></div>
               <div className="z-[-1] triangle-blur-form2-4 [transform:rotate(10deg)]"></div>
               <div className="z-[-1] triangle-blur-form3 [transform:rotate(-30deg)]"></div>
               <div className="z-[-1] triangle-blur-form5 [transform:rotate(-70deg)]"></div>
-              <div className="z-[-1] triangle-shadow-form animate-slide-X [transform:rotate(-40deg)]"></div>
+              <div className="z-[-1] triangle-shadow-form md:animate-slide-X [transform:rotate(-40deg)]"></div>
             </div>
           </div>
         </div>
