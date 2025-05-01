@@ -1,6 +1,6 @@
 "use client";
 import UnicornEmbed from "@/components/UnicornEmbed";
-import AnimatedCopy from "./AnimatedCopy";
+import AnimatedCopy from "@/components/ui/AnimatedCopy";
 import InteractiveLiquid from "./GradietButton/InteractiveLiquid";
 import { usePageTransition } from "./hook/usePageTransition";
 import { motion } from "framer-motion";
