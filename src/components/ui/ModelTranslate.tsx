@@ -1,4 +1,4 @@
-
+{/*
 "use client";
 import React, { useRef, useState, useEffect, useMemo } from "react";
 import * as THREE from "three";
@@ -213,5 +213,4 @@ const Model = () => {
 };
 
 export default Model;
-
-
+*/ }

@@ -1,4 +1,4 @@
-"use client";
+{/*"use client";
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
@@ -23,3 +23,4 @@ import { Leva } from "leva";
 
 export default Scene;
 // dpr={[1, 1]}
+*/}
