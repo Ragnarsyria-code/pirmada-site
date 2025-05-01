@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="relative h-[533px] px-4 md:h-[614px] flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative h-[533px] mx-4 md:h-[614px] flex flex-col items-center justify-center overflow-hidden">
         {/* UnicornEmbed as background */}
         <div className="absolute inset-0 z-0 ">
           <UnicornEmbed />
