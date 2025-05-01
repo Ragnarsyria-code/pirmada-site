@@ -10,21 +10,21 @@ export default function Home() {
 
   return (
     <main>
-      <div className="relative h-[533px] md:h-[614px] flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative h-[533px] px-4 md:h-[614px] flex flex-col items-center justify-center overflow-hidden">
         {/* UnicornEmbed as background */}
-        <div className="absolute inset-0 z-0 top-[-16px]">
+        <div className="absolute inset-0 z-0 ">
           <UnicornEmbed />
         </div>
 
         {/* Content in front */}
-        <div className="relative z-2 flex flex-col items-center justify-center text-center w-full mt-56">
+        <div className="relative z-2 flex flex-col items-center justify-center text-center w-ful mt-40 md:mt-56">
           <AnimatedCopy
             tag="default"
             delay={0.3}
             duration={1}
             stagger={0.05}
             direction="bottom"
-            className="max-w-[500px] md:max-w-[800px] text-center "
+            className="max-w-[380px] md:max-w-[800px] text-center "
           >
             Ignite Your Vision Elevate Your Brand
           </AnimatedCopy>
@@ -47,7 +47,7 @@ export default function Home() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
     >
-      <div className="relative z-2 mt-8 md:mt-12" onClick={() => navigateWithTransition("/contact")}>
+      <div className="relative z-2 mt-8 " onClick={() => navigateWithTransition("/contact")}>
           <InteractiveLiquid label="Get Started" />
         </div>
     </motion.div>
