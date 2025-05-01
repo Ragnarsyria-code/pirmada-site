@@ -70,7 +70,7 @@ const AboutBentoGrid: React.FC = () => {
     // Attach ref to the entire section to observe
     <section
       ref={sectionRef}
-      className="relative w-[90vw] mx-auto flex flex-col items-center justify-center py-20 md:pt-60 md:pb-32 overflow-hidden"
+      className="relative w-[90vw] mx-auto flex flex-col items-center justify-center py-36 md:pt-60 md:pb-32 overflow-hidden"
     >
       
        <AnimatedCopy

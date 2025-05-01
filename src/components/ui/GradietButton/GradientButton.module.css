@@ -22,7 +22,7 @@
     justify-content: center;
     width: 220px;
     height: 60px;
-    margin: 50px auto;
+    margin: 12px auto;
     border: none;
     background-color: transparent;
   }
@@ -54,9 +54,9 @@
     position: absolute;
     top: 0%;
     left: 50%;
-    transform: translate(0%, 0%);
+    transform: translate(-50%, -58%);
     width: 165.23%;
-    height: 300%;
+    height: 0%;
     mix-blend-mode: soft-light;
     pointer-events: none;
   }

@@ -1,12 +1,16 @@
+"use client"
 import React from 'react'
 import InteractiveLiquid from '@/components/ui/GradietButton/InteractiveLiquid'
+import { usePageTransition } from "@/components/ui/hook/usePageTransition";
+import { motion } from "framer-motion";
 
 import Image from "next/image";
 import LooperGroupLeft from "@/components/ImagesAboutPage/LooperGroupLeft.jpg"
-import Link from 'next/link';
 import AnimatedCopy from '../AnimatedCopy';
 
 const Hero = () => {
+    const { navigateWithTransition } = usePageTransition();
+  
   return (
     <section className="relative flex flex-col items-center justify-center py-40 md:py-56 overflow-hidden">
       
@@ -41,7 +45,7 @@ const Hero = () => {
         duration={1}
         stagger={0.05}
         direction="bottom"
-        className=" max-w-xl text-center "
+        className=" max-w-xl text-center z-2"
       >
      
       About Pirmada
@@ -54,14 +58,22 @@ const Hero = () => {
             duration={1}
             stagger={0.05}
             direction="bottom"
-            className=" text-[16px] md:text-xl text-center max-w-sm md:max-w-[700px] "
+            className=" text-[16px] md:text-xl text-center max-w-sm md:max-w-[700px] z-2 "
           >
            Pirmada is a tech-focused creative agency that builds brands from the ground up. It uses clear strategy and smart design to craft standout online identities. Whether for a new startup or an established business
            we  injects energy and expertise into every pixel—turning brands into unforgettable market leaders.  </AnimatedCopy>
   
-        <Link href="/contact" >
+        
+
+           <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
+    >
+      <div className="relative z-2 mt-8" onClick={() => navigateWithTransition("/contact")}>
           <InteractiveLiquid label="Get Started" />
-        </Link>
+        </div>
+    </motion.div>
       </div>
 
     </section>

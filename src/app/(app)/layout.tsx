@@ -4,6 +4,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import Nav from "@/components/ui/Nav/Navbar";
 import Footer from "@/components/ui/Footer/Footer";
+import { ViewTransitions } from "next-view-transitions";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,10 +39,14 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${biggerFont.variable} antialiased bg-black`}
-      >
+      > 
+      <ViewTransitions>
         <Nav />
+       
         {children}
+       
        <Footer/>
+       </ViewTransitions>
       </body>
     </html>
   );

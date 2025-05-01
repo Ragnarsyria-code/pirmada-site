@@ -36,7 +36,7 @@ const getBaseClasses = (tag: string): string => {
       return "animated-copy text-white text-xl whitespace-pre-line md:text-2xl font-medium tracking-[-0.9px] ";
     // Add further cases for other tags if needed.
     default:
-      return "animated-copy text-white text-4xl  md:text-8xl ";
+      return "animated-copy text-white text-5xl whitespace-pre-line font-semibold tracking-[-0.9px]   md:text-[90px] ";
   }
 };
 
