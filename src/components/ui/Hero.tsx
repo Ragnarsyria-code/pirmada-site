@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <div className="relative h-[533px] md:h-[614px] flex flex-col items-center justify-center overflow-hidden">
         {/* UnicornEmbed as background */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 top-[-16px]">
           <UnicornEmbed />
         </div>
 
@@ -47,7 +47,7 @@ export default function Home() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
     >
-      <div className="relative z-2 mt-8" onClick={() => navigateWithTransition("/contact")}>
+      <div className="relative z-2 mt-8 md:mt-12" onClick={() => navigateWithTransition("/contact")}>
           <InteractiveLiquid label="Get Started" />
         </div>
     </motion.div>
