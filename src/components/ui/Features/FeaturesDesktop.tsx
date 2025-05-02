@@ -44,7 +44,7 @@ const Features = () => {
       </div>
 
 
-      <div className="hidden md:flex triangle-blur-left transform rotate-[0deg] animate-slide-X "></div>
+      <div className="triangle-blur-left transform rotate-[0deg] md:animate-slide-X "></div>
       {/* <div className="triangle-blur-right transform rotate-[80deg] animate-slide-X "></div> */}
       <div className="hidden md:flex triangle-blur-mid transform  animate-slide-X "></div>
       <div className="md:hidden flex triangle-blur-mobile transform "></div>
