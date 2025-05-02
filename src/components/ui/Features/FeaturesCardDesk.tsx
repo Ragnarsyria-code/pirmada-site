@@ -29,7 +29,7 @@ const FeaturesCard = ({
   const isBlurredDesktop = index === "02";
 
   const overlayElement =  isBlurredDesktop ? (
-    <div className="absolute -inset-[16px] md:-inset-[16px] rounded-xl md:rounded-[50px] border-[10px] md:border-[16px] mix-blend-overlay border-white bg-opacity-100 hidden md:block pointer-events-none" />
+    <div className="absolute -inset-[16px] md:-inset-[16px] rounded-4xl  border-[10px] md:border-[16px] mix-blend-overlay border-white bg-opacity-100 hidden md:block pointer-events-none" />
   ) : null;
 
   const textContainerClass = "relative px-4 md:px-0 py-4 md:py-0 rounded-xl bg-black";
@@ -38,7 +38,7 @@ const FeaturesCard = ({
 
   return (
     <div
-      className={`relative border border-white/10 py-3 px-4 md:py-6 md:px-8 rounded-2xl md:rounded-4xl ${className}`}
+      className={`relative border border-white/10 py-3 px-4 md:py-6 md:px-8 rounded-2xl  ${className}`}
       style={outerStyle}
     >
       {overlayElement}

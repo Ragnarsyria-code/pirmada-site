@@ -36,8 +36,8 @@ const Hero = () => {
         alt=""
         src={LooperGroupLeft}
       />
-<div className="absolute  bottom-0  left-[-40px] right-[-40px] h-full bg-gradient-to-t from-black to-black/40 "></div>
-<div className="absolute  bottom-0 left-[-40px] right-[-40px] h-50 bg-gradient-to-t from-black to-black/90 blur-xl "></div>
+<div className="absolute hidden bottom-0  left-[-40px] right-[-40px] h-full bg-gradient-to-t from-black to-black/40 "></div>
+<div className="absolute hidden  bottom-0 left-[-40px] right-[-40px] h-50 bg-gradient-to-t from-black to-black/90 blur-xl "></div>
       {/* Center content */}
       <div className="relative flex flex-col items-center justify-center text-center w-full">
         

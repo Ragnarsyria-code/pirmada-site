@@ -12,7 +12,7 @@ interface CardProps {
 
 const ServiceCard: React.FC<CardProps> = ({ imageSrc, title, description }) => {
   return (
-    <div className="border border-white/20 rounded-xl bg-[#131313] px-7 py-8 md:py-12 flex flex-col">
+    <div className="border border-white/20 rounded-2xl bg-[#131313] px-7 py-8 md:py-12 flex flex-col">
       <Image
         src={imageSrc}
         alt="brand"

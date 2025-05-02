@@ -5,7 +5,7 @@ export const CardThree = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
     <div
       ref={ref}
-      className="bg-[#121212] relative rounded-[10px] border border-white/15 overflow-hidden row-span-2 lg:col-span-2 lg:row-span-7"
+      className="bg-[#121212] relative rounded-2xl border border-white/15 overflow-hidden row-span-2 lg:col-span-2 lg:row-span-7"
     >
       {/* Background */}
       <div className="absolute inset-0">
