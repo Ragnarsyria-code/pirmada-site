@@ -9,11 +9,11 @@ const page = () => {
   return (
    <>
    <Hero/>
-   
+   <LogoTicker/>
    <Services/>
   
    <Statistics/>
-   <LogoTicker/>
+   
    </>
   )
 }

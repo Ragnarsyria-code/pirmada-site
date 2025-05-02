@@ -7,17 +7,20 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import LooperGroupLeft from "@/components/ImagesAboutPage/LooperGroupLeft.jpg"
 import AnimatedCopy from '../AnimatedCopy';
+import UnicornEmbed from '@/components/UnicornForAboutpage';
 
 const Hero = () => {
     const { navigateWithTransition } = usePageTransition();
   
   return (
     <section className="relative flex flex-col items-center justify-center py-40 md:py-56 overflow-hidden">
-      
+      <div className="absolute inset-0 z-0 ">
+                <UnicornEmbed />
+              </div>
       {/* Left image */}
       <Image
       priority
-        className="absolute left-[-200px]  md:left-[-200px] -top-20 md:top-20 w-[1037.3px] h-[889px] object-contain"
+        className="absolute hidden left-[-200px]  md:left-[-200px] -top-20 md:top-20 w-[1037.3px] h-[889px] object-contain"
         width={1537}
         height={1489}
         alt=""
@@ -27,7 +30,7 @@ const Hero = () => {
       {/* Right image (flipped) */}
       <Image
       priority
-        className="absolute  right-[-200px] md:right-[-200px] -top-20 md:top-20 w-[1037.3px] h-[889px] object-contain scale-x-[-1]"
+        className="absolute hidden  right-[-200px] md:right-[-200px] -top-20 md:top-20 w-[1037.3px] h-[889px] object-contain scale-x-[-1]"
         width={1537}
         height={1489}
         alt=""

@@ -22,7 +22,7 @@ const logos = [
 
 export default function LogoTicker() {
   return (
-    <section className=" py-24 md:py-40 overflow-x-clip flex justify-center">
+    <section className="py-24 md:pt-24 md:pb-40 overflow-x-clip flex justify-center">
       <div className="flex flex-col items center justify-center">
        <AnimatedCopy
           tag="h1"

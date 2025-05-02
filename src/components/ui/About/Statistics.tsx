@@ -3,7 +3,7 @@ import AnimatedCopy from '../AnimatedCopy'
 
 const Statistics = () => {
   return (
-    <section className='py-24 flex flex-col justify-center  items-center '>
+    <section className='py-24 md:py-40 flex flex-col justify-center  items-center '>
             <AnimatedCopy
                    tag="h1"
                    delay={0.2}

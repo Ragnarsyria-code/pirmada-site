@@ -6,7 +6,7 @@ import AnimatedCopy from '../AnimatedCopy'
 
 const Services = () => {
   return (
-    <section className='py-12 md:py-24 flex flex-col justify-center  items-center '>
+    <section className='py-12 md:py-40 flex flex-col justify-center  items-center '>
        <AnimatedCopy
               tag="h1"
               delay={0.2}
