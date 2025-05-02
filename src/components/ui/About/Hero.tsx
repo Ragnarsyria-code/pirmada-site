@@ -36,8 +36,8 @@ const Hero = () => {
         alt=""
         src={LooperGroupLeft}
       />
-<div className="absolute hidden bottom-0  left-[-40px] right-[-40px] h-full bg-gradient-to-t from-black to-black/40 "></div>
-<div className="absolute hidden  bottom-0 left-[-40px] right-[-40px] h-50 bg-gradient-to-t from-black to-black/90 blur-xl "></div>
+<div className="absolute  bottom-0  left-[-40px] right-[-40px] h-full bg-gradient-to-t from-black to-black/40 "></div>
+<div className="absolute  bottom-0 left-[-40px] right-[-40px] h-50 bg-gradient-to-t from-black to-black/90 blur-xl "></div>
       {/* Center content */}
       <div className="relative flex flex-col items-center justify-center text-center w-full">
         
@@ -61,7 +61,7 @@ const Hero = () => {
             duration={1}
             stagger={0.05}
             direction="bottom"
-            className=" text-[16px] md:text-xl text-center max-w-sm md:max-w-[700px] z-2 "
+            className=" text-[16px] md:text-xl text-center max-w-[400px] md:max-w-[700px] z-2 "
           >
            Pirmada is a tech-focused creative agency that builds brands from the ground up. It uses clear strategy and smart design to craft standout online identities. Whether for a new startup or an established business
            we  injects energy and expertise into every pixel—turning brands into unforgettable market leaders.  </AnimatedCopy>

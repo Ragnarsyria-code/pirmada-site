@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="relative h-[533px] mx-4 md:h-[614px] flex flex-col items-center justify-center overflow-hidden">
+      <div className="relative h-[533px] md:h-[614px] flex flex-col items-center justify-center overflow-hidden">
         {/* UnicornEmbed as background */}
         <div className="absolute inset-0 z-0 ">
           <UnicornEmbed />
@@ -24,7 +24,7 @@ export default function Home() {
             duration={1}
             stagger={0.05}
             direction="bottom"
-            className="max-w-[380px] md:max-w-[800px] text-center "
+            className="max-w-[400px] md:max-w-[800px] text-center "
           >
             Ignite Your Vision Elevate Your Brand
           </AnimatedCopy>

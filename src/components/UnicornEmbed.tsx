@@ -45,7 +45,7 @@ export default function UnicornEmbed() {
     <div
     className="flex md:hidden"
       data-us-project="RIgC1kLvT3gOHpTbXCQY"
-      style={{ width: "100%", height: "450px" }}
+      style={{ width: "100%", height: "400px" }}
     />
     </>
   );
