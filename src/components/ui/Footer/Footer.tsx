@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWhatsapp,
@@ -11,6 +10,7 @@ import {
   faDribbble,
   faBehance,
 } from "@fortawesome/free-brands-svg-icons";
+import UnicornEmbed from "@/components/UnicornFooter";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -21,24 +21,11 @@ const Footer: React.FC = () => {
       {/* Footer Header Area */}
       <div className="relative w-full xs:h-[333.5px] h-[422px] md:h-[333px]  flex items-center justify-center">
         
-        <div className="abosolute inset-0">
-          <Image
-            src="/assets/footer-bg.png"
-            alt="Footer background"
-            fill
-            className="object-cover opacity-40"
-          />
-        </div>
+        
         {/* Centered Text Logo */}
-        <div className="relative z-10">
-          <Image
-            src="/assets/footer-text-logo.svg"
-            alt="PIRMADA Logo"
-            width={800}
-            height={150}
-            className="object-contain"
-          />
-        </div>
+        
+          <UnicornEmbed/>
+        
       </div>
      
       {/* Footer Bottom Bar */}
