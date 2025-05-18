@@ -1,11 +1,15 @@
 // lib/utils.ts
-import { clsx } from 'clsx'
+
 import { cva, type VariantProps } from 'class-variance-authority'
 
-export function cn(...inputs: (string | undefined)[]) {
-  return clsx(inputs)
-}
 
+
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 export const animatedLinkVariants = cva(
   'relative font-base text-lg inline-flex items-center justify-center overflow-hidden no-underline',
   {
