@@ -300,11 +300,7 @@ const Nav: React.FC = () => {
                 <h1>About us</h1>
               </Link>
             </div>
-            <div className="menu-link">
-              <Link href="/work" onClick={(e) => handleNavigation(e, "/work")}>
-                <h1>Services</h1>
-              </Link>
-            </div>
+            
             <div className="menu-link">
               <Link href="/work" onClick={(e) => handleNavigation(e, "/work")}>
                 <h1>Work</h1>
