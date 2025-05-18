@@ -42,9 +42,9 @@ export default function Hero() {
     Img19.src, Img20.src, Img21.src, Img22.src, Img23.src, Img24.src,
   ];*/}
   return (
-    <div className="mx-auto  max-w-9xl rounded-3xl bg-gray-950/5 p-2 ring-1 ring-neutral-700/10 dark:bg-neutral-800">
+    <div className="mx-auto  max-w-9xl  bg-black">
       {/* 1) RELATIVE PARENT to stack children */}
-      <div className="relative h-[600px] overflow-hidden rounded-2xl">
+      <div className="relative h-[600px] overflow-hidden ">
         
         
         <div className="absolute inset-0 z-0">

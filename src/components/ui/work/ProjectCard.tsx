@@ -60,7 +60,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           }}
         >
           <h2 className="font-medium text-2xl md:text-3xl text-white">{title}</h2>
-          <p className="text-base md:text-lg mt-2 text-white/80">{description}</p>
+          <p className="text-[16px] md:text-lg mt-2 text-white/80">{description}</p>
         </motion.div>
       </div>
     </Link>
