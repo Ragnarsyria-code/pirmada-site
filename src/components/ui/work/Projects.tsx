@@ -64,7 +64,7 @@ export default function ProjectsSection() {
               duration={1}
               stagger={0.05}
               direction="bottom"
-              className=" text-4xl font-bold "
+              className="max-w-[300px] md:max-w-md text-4xl font-bold "
             >
               Our Latest Creative Impact
             </AnimatedCopy>
@@ -74,7 +74,7 @@ export default function ProjectsSection() {
               duration={1}
               stagger={0.04}
               direction="bottom"
-              className="mt-4 max-w-2xl text-base md:text-lg"
+              className="mt-4 max-w-sm  md:max-w-xl text-base md:text-lg"
             >
              Crafting modern, innovative digital solutions that consistently drive measurable impact across web, mobile, and branding projects for ambitious clients worldwide.
             </AnimatedCopy>
