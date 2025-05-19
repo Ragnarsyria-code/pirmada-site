@@ -39,7 +39,7 @@ export default function Home() {
           >
             Welcome to Pirmada. We help you bring your idea to life — from great websites and apps to full development services. We help entrepreneurs, startups, and businesses shine.
           </AnimatedCopy>
-        </div>
+       
    
         {/* Button */}
         <motion.div
@@ -51,7 +51,7 @@ export default function Home() {
           <InteractiveLiquid label="Get Started" />
         </div>
     </motion.div>
-        
+    </div>
       </div>
     </main>
   );

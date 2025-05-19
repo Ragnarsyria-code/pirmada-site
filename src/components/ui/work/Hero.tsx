@@ -26,11 +26,16 @@ import Img20 from '@/components/parallaxImages/8.png';
 import Img21 from '@/components/parallaxImages/9.png';
 import { ThreeDMarquee } from '@/components/ui/3d-marquee';
 import AnimatedCopy from '@/components/ui/AnimatedCopy';
+import InteractiveLiquid from "@/components/ui/GradietButton/InteractiveLiquid";
+import { usePageTransition } from "@/components/ui/hook/usePageTransition";
+import { motion } from "framer-motion";
 
 export default function Hero() {
  const staticImages = [
   Img1,Img2,Img3,Img4,Img5,Img6,Img7,Img8,Img9,Img10,Img11,Img12,Img13,Img14,Img15,Img16,Img17,Img18,Img19,Img20,Img21,Img1
  ]
+ const { navigateWithTransition } = usePageTransition();
+
   {/*  const staticImages2: string[] = [
     Img1.src, Img2.src, Img3.src, Img4.src, Img5.src, Img6.src,
     Img7.src, Img8.src, Img9.src, Img10.src, Img11.src, Img12.src,
@@ -89,6 +94,15 @@ export default function Hero() {
           >
             Dive into our latest work to see how we transform bold ideas into impactful, measurable success stories. We partner with forward-thinking brands to craft digital experiences that captivate audiences and drive real business growth.
           </AnimatedCopy>
+          <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
+    >
+      <div className="relative z-2 mt-8 " onClick={() => navigateWithTransition("/contact")}>
+          <InteractiveLiquid label="Get Started" />
+        </div>
+    </motion.div>
         </div>
         
       </div>
