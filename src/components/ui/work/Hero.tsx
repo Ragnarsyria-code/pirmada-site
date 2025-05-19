@@ -29,7 +29,7 @@ import AnimatedCopy from '@/components/ui/AnimatedCopy';
 
 export default function Hero() {
  const staticImages = [
-  Img1,Img2,Img3,Img4,Img5,Img6,Img7,Img8,Img9,Img10,Img11,Img12,Img13,Img14,Img15,Img16,Img17,Img18,Img19,Img20,Img21
+  Img1,Img2,Img3,Img4,Img5,Img6,Img7,Img8,Img9,Img10,Img11,Img12,Img13,Img14,Img15,Img16,Img17,Img18,Img19,Img20,Img21,Img1
  ]
   {/*  const staticImages2: string[] = [
     Img1.src, Img2.src, Img3.src, Img4.src, Img5.src, Img6.src,
