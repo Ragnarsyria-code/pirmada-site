@@ -4,7 +4,7 @@ import Img1 from '@/components/parallaxImages/1.png';
 import Img2 from '@/components/parallaxImages/2.png';
 import Img3 from '@/components/parallaxImages/3.png';
 import Img4 from '@/components/parallaxImages/4.png';
-import Img5 from '@/components/parallaxImages/5.png';
+import Img5 from '@/components/parallaxImages/11.png';
 import Img6 from '@/components/parallaxImages/6.png';
 import Img7 from '@/components/parallaxImages/7.png';
 import Img8 from '@/components/parallaxImages/8.png';
@@ -12,14 +12,14 @@ import Img9 from '@/components/parallaxImages/9.png';
 
 import Img10 from '@/components/parallaxImages/10.png';
 import Img11 from '@/components/parallaxImages/11.png';
-import Img12 from '@/components/parallaxImages/12.png';
+import Img12 from '@/components/parallaxImages/4.png';
 
 import Img13 from '@/components/parallaxImages/1.png';
 
 import Img14 from '@/components/parallaxImages/2.png';
 import Img15 from '@/components/parallaxImages/3.png';
 import Img16 from '@/components/parallaxImages/4.png';
-import Img17 from '@/components/parallaxImages/5.png';
+import Img17 from '@/components/parallaxImages/10.png';
 import Img18 from '@/components/parallaxImages/6.png';
 import Img19 from '@/components/parallaxImages/7.png';
 import Img20 from '@/components/parallaxImages/8.png';
