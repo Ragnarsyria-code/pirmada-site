@@ -138,14 +138,14 @@ export const ThreeDMarquee = ({
   return (
     <div
       className={cn(
-        'mx-auto h-[600px] mt-10 overflow-hidden ',
+        'mx-auto h-[500px] md:h-[600px] mt-10 overflow-hidden ',
         className
       )}
     >
       <div className="flex w-full h-full items-center justify-center">
         <div
           className="
-            w-[1720px] h-[860px] shrink-0
+           w-[820px] md:w-[1720px] h-[460px] md:h-[860px] shrink-0
             [transform-style:preserve-3d]
             origin-center
             grid grid-cols-4 gap-8
@@ -156,13 +156,13 @@ export const ThreeDMarquee = ({
             <motion.div
               key={colIndex}
               style={{ y: yTransforms[colIndex] }}
-              className="flex flex-col gap-8"
+              className="flex flex-col gap-4 md:gap-8"
             >
               {colImages.map((img, idx) => (
                 <motion.div
                   key={idx}
                   
-                  className="relative w-full h-[200px] rounded-lg overflow-hidden"
+                  className="relative w-full h-[100px] md:h-[200px] rounded-lg overflow-hidden"
                 >
                   <Image
                     src={img}

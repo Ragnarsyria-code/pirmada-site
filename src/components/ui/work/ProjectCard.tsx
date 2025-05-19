@@ -29,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <Link href={href || '#'} className='border border-white/30 rounded-[12px] '>
       <div
-        className={`group relative w-full h-[300px] md:h-[600px] overflow-hidden rounded-[11px]  ${className}`}
+        className={`group relative w-full h-[450px] md:h-[600px] overflow-hidden rounded-[11px]  ${className}`}
         style={{
           backgroundImage: `url(${imageSrc})`,
           backgroundRepeat: 'no-repeat',

@@ -1,4 +1,5 @@
 "use client"
+import Img1 from '@/components/parallaxImages/1.png';
 
 import Img2 from '@/components/parallaxImages/2.png';
 import Img3 from '@/components/parallaxImages/3.png';
@@ -8,10 +9,13 @@ import Img6 from '@/components/parallaxImages/6.png';
 import Img7 from '@/components/parallaxImages/7.png';
 import Img8 from '@/components/parallaxImages/8.png';
 import Img9 from '@/components/parallaxImages/9.png';
+
 import Img10 from '@/components/parallaxImages/10.png';
 import Img11 from '@/components/parallaxImages/11.png';
+import Img12 from '@/components/parallaxImages/12.png';
 
 import Img13 from '@/components/parallaxImages/1.png';
+
 import Img14 from '@/components/parallaxImages/2.png';
 import Img15 from '@/components/parallaxImages/3.png';
 import Img16 from '@/components/parallaxImages/4.png';
@@ -20,21 +24,13 @@ import Img18 from '@/components/parallaxImages/6.png';
 import Img19 from '@/components/parallaxImages/7.png';
 import Img20 from '@/components/parallaxImages/8.png';
 import Img21 from '@/components/parallaxImages/9.png';
-import Img22 from '@/components/parallaxImages/10.png';
-import Img23 from '@/components/parallaxImages/11.png';
-import Img24 from '@/components/parallaxImages/12.png';
-
 import { ThreeDMarquee } from '@/components/ui/3d-marquee';
 import AnimatedCopy from '@/components/ui/AnimatedCopy';
 
 export default function Hero() {
  const staticImages = [
-     Img2,Img3,  Img22, Img4,  Img6,
-    Img24,Img5, Img8, Img9, Img10, Img11, 
-    Img13, Img14, Img15, Img16, Img17, Img18,
-    Img19, Img20, Img21, Img23,  Img7,
-  ];
-
+  Img1,Img2,Img3,Img4,Img5,Img6,Img7,Img8,Img9,Img10,Img11,Img12,Img13,Img14,Img15,Img16,Img17,Img18,Img19,Img20,Img21
+ ]
   {/*  const staticImages2: string[] = [
     Img1.src, Img2.src, Img3.src, Img4.src, Img5.src, Img6.src,
     Img7.src, Img8.src, Img9.src, Img10.src, Img11.src, Img12.src,
