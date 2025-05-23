@@ -30,10 +30,77 @@ const biggerFont = localFont({
 
 
 export const metadata: Metadata = {
-  title: "Pirmada",
-  description: "Ignite your vision, elevate your brand.",
+  title: {
+    default: 'Pirmada',
+    template: '%s | Pirmada - Technology Agency',
+  },
+  description: 'Pirmada is a premium creative agency helping brands ignite vision and elevate their digital presence with expert design & development.',
+  keywords: [
+    'Pirmada',
+    'creative agency',
+    'digital branding',
+    'web design',
+    'UI/UX',
+    'web development',
+    'app design',
+    'app development',
+    'graphic design',
+    'wordpress',
+    'website',
+    'brand elevation'
+  ],
+  authors: [
+    { name: 'Ibrahim Al Maroof', url: '/' },
+    { name: 'Areej Al Khdr', url: '/' }
+  ],
+  viewport: 'width=device-width, initial-scale=1',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      'index': true,
+      'follow': true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    }
+  },
+  openGraph: {
+    title: 'Pirmada - Technology Agency',
+    description: 'Explore Pirmada’s services: brand identity, web design, and development crafted to elevate your brand.',
+    url: '/',
+    siteName: 'Pirmada',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Pirmada - Technology Agency'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pirmada - Technology Agency',
+    description: 'Elevate your brand with Pirmada’s design & development expertise. Discover our portfolio today.',
+    images: ['/og-image.png'],
+    creator: '@PirmadaAgency'
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
+    other: [
+      { rel: 'manifest', url: '/manifest' }
+    ]
+  },
+  themeColor: [
+   
+    { media: '(prefers-color-scheme: dark)', color: '#000000' }
+  ]
 };
-
 function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
