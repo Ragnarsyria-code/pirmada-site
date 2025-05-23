@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   ],
   authors: [
     { name: 'Ibrahim Al Maroof', url: '/' },
-    { name: 'Areej Al Khdr', url: '/' }
+ 
   ],
   viewport: 'width=device-width, initial-scale=1',
   robots: {
