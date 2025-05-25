@@ -31,7 +31,7 @@ const biggerFont = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Pirmada',
+    default: 'PIRMADA',
     template: '%s | Pirmada - Technology Agency',
   },
   description: 'Pirmada is a premium creative agency helping brands ignite vision and elevate their digital presence with expert design & development.',
@@ -66,16 +66,16 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'Pirmada - Technology Agency',
+    title: 'PIRMADA | Creative Design and Development Agency',
     description: 'Explore Pirmada’s services: brand identity, web design, and development crafted to elevate your brand.',
-    url: '/',
-    siteName: 'Pirmada',
+    url: 'https://pirmada.com/',
+    siteName: 'PIRMADA',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Pirmada - Technology Agency'
+        alt: 'Pirmada Image'
       }
     ],
     locale: 'en_US',
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pirmada - Technology Agency',
+    title: 'PIRMADA | Creative Design and Development Agency',
     description: 'Elevate your brand with Pirmada’s design & development expertise. Discover our portfolio today.',
     images: ['/og-image.png'],
     creator: '@PirmadaAgency'

@@ -37,7 +37,7 @@ export default function Home() {
             direction="bottom"
             className="text-[16px] md:text-xl text-center text-white/85 max-w-[400px] md:max-w-4xl"
           >
-            Welcome to Pirmada. We help you bring your idea to life — from great websites and apps to full development services. We help entrepreneurs, startups, and businesses shine.
+            Welcome to Pirmada. We help you bring your idea to life ,from great websites and apps to full development services. We help entrepreneurs, startups, and businesses shine.
           </AnimatedCopy>
        
    
