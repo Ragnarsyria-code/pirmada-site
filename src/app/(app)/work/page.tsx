@@ -1,4 +1,3 @@
-import { WebPageJsonLd } from '@/components/SEO/WebPageJsonLd';
 import Hero from '@/components/ui/work/Hero';
 import Projects from '@/components/ui/work/Projects';
 import type { Metadata } from 'next';
@@ -13,16 +12,12 @@ export const metadata: Metadata = {
   },
 };
 export default function Home() {
-    const titleString = metadata.title as string
     const desc = metadata.description!
   
   return (
    <>
-         <WebPageJsonLd
-           name={titleString}
-           description={desc}
-           url="/work"
-         />
+         <p className="sr-only">{desc}</p>
+
    
     <Hero/>
     <Projects/>
