@@ -30,10 +30,7 @@ const biggerFont = localFont({
 
 
 export const metadata: Metadata = {
-  title: {
-    default: 'PIRMADA',
-    template: '%s | Pirmada - Technology Agency',
-  },
+  title: 'PIRMADA',
   description: 'Pirmada is a premium creative agency helping brands ignite vision and elevate their digital presence with expert design & development.',
   keywords: [
     'Pirmada',

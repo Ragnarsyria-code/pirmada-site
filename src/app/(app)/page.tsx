@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: '/',
     title: 'PIRMADA | Creative Design and Development Agency',
+    siteName: 'PIRMADA',
     description:
       'Pirmada is a premium creative agency helping brands ignite vision and elevate their digital presence with expert design & development.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'PIRMADA Logo' }],
