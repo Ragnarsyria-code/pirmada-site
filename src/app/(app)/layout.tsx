@@ -31,9 +31,10 @@ const biggerFont = localFont({
 
 export const metadata: Metadata = {
   title: 'PIRMADA',
+  applicationName: 'PIRMADA',
   description: 'Pirmada is a premium creative agency helping brands ignite vision and elevate their digital presence with expert design & development.',
   keywords: [
-    'Pirmada',
+    'pirmada',
     'creative agency',
     'digital branding',
     'web design',
@@ -51,17 +52,7 @@ export const metadata: Metadata = {
  
   ],
   viewport: 'width=device-width, initial-scale=1',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      'index': true,
-      'follow': true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    }
-  },
+ 
   openGraph: {
     title: 'PIRMADA | Creative Design and Development Agency',
     description: 'Explore Pirmada’s services: brand identity, web design, and development crafted to elevate your brand.',
@@ -98,6 +89,18 @@ export const metadata: Metadata = {
     { media: '(prefers-color-scheme: dark)', color: '#000000' }
   ]
 };
+
+{/** robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      'index': true,
+      'follow': true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    }
+  }, */}
 function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
