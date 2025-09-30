@@ -9,39 +9,35 @@ export async function POST(req: Request) {
   try {
     // Parse the request body and extract required fields
     const { email, message, name, number } = await req.json();
-    if (!email || !message ||  !name || !number) {
+    if (!email || !message || !name || !number) {
       return NextResponse.json(
-        {
-          error:
-            "Email, message, name, and number are required",
-        },
+        { error: "Email, message, name, and number are required" },
         { status: 400 }
       );
     }
 
-    // Configure transporter with Gmail SMTP credentials
+    // Configure transporter with Gmail SMTP credentials from Environment Variables
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 587,
       secure: false, // secure: true for port 465
       auth: {
-        user: "info@pirmada.com",
-        pass: "sshm nlhw cwbt kntr",
+        user: process.env.SMTP_USER, // Environment Variable
+        pass: process.env.SMTP_PASS, // Environment Variable
       },
     });
 
     // Compose the professional email content with styling
     const mailOptions = {
       from: "Website Contact Form",
-      to: "info@pirmada.com", // Destination email
+      to: process.env.SMTP_USER, // Destination email same as SMTP_USER
       subject: "New Contact Form Submission",
       text: `New Contact Form Submission
 
 Sender Details:
-   Name: ${name}
- 
-  Email: ${email}
-  Phone Number: ${number}
+Name: ${name}
+Email: ${email}
+Phone Number: ${number}
 
 Message:
 ${message}
@@ -58,10 +54,9 @@ Pirmada`,
           <h3 style="color: #222;">Sender Details</h3>
           <table style="width: 100%; border-collapse: collapse;">
             <tr>
-              <td style="padding: 8px; font-weight: bold;"> Name:</td>
+              <td style="padding: 8px; font-weight: bold;">Name:</td>
               <td style="padding: 8px;">${name}</td>
             </tr>
-            
             <tr>
               <td style="padding: 8px; font-weight: bold;">Email:</td>
               <td style="padding: 8px;">${email}</td>
