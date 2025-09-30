@@ -95,11 +95,11 @@ const ContactSection: React.FC = () => {
             </p>
             <div className="flex gap-2 mt-2 md:mt-4">
               <p className="text-white/80 ">Email:</p>
-              <p className="text-teal-400 ">info@pirmada.com</p>
+              <p className="text-teal-400 ">official@pirmada.com</p>
               </div>
               <div className="flex  gap-2 mt-2 md:mt-4">
               <p className="text-white/80 ">Phone:</p>
-              <p className="text-teal-400 ">+971 508190026</p>
+              <p className="text-teal-400 ">+971 545200134</p>
               </div>
            
           </div>
