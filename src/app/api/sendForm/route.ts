@@ -16,21 +16,21 @@ export async function POST(req: Request) {
       );
     }
 
-    // Configure transporter with Gmail SMTP credentials from Environment Variables
+    // Configure transporter with Gmail SMTP credentials from environment variables
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 587,
       secure: false, // secure: true for port 465
       auth: {
-        user: process.env.SMTP_USER, // Environment Variable
-        pass: process.env.SMTP_PASS, // Environment Variable
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
     // Compose the professional email content with styling
     const mailOptions = {
       from: "Website Contact Form",
-      to: process.env.SMTP_USER, // Destination email same as SMTP_USER
+      to: process.env.SMTP_USER, // Destination email
       subject: "New Contact Form Submission",
       text: `New Contact Form Submission
 
