@@ -8,10 +8,8 @@ import Clients from '@/components/home/Clients'
 import Reveal from '@/components/motion/Reveal'
 import TextReveal from '@/components/motion/TextReveal'
 import WebPageJsonLd from '@/components/seo/WebPageJsonLd'
-import { ButtonLink } from '@/components/ui/Button'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { services } from '@/content/services'
-import { site } from '@/content/site'
 
 const title = 'About'
 const description =
@@ -187,20 +185,6 @@ export default function AboutPage() {
       </section>
 
       <Clients />
-
-      <section className="border-t border-line">
-        <div className="container-x section-y-sm flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="max-w-[32ch] text-h4 text-fg">Talk to us about what you are building.</p>
-            <a href={`mailto:${site.email}`} className="link-quiet mt-2 inline-block text-small">
-              {site.email}
-            </a>
-          </div>
-          <ButtonLink href="/contact" variant="primary" arrow>
-            Start a project
-          </ButtonLink>
-        </div>
-      </section>
     </>
   )
 }

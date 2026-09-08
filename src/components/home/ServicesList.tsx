@@ -15,7 +15,6 @@ export default function ServicesList() {
   const baseId = useId()
   const [active, setActive] = useState(0)
   const [expanded, setExpanded] = useState<number | null>(0)
-  const current = services[active]
 
   return (
     <section id="services" aria-labelledby="services-title" className="border-t border-line">
@@ -90,7 +89,7 @@ export default function ServicesList() {
                               </li>
                             ))}
                           </ul>
-                          <div className="frame aspect-[16/10] md:hidden">
+                          <div className="frame aspect-[16/10] lg:hidden">
                             <Image src={s.image} alt={s.imageAlt} fill sizes="92vw" className="object-cover" />
                           </div>
                         </div>
@@ -105,25 +104,29 @@ export default function ServicesList() {
           <div className="hidden lg:col-span-5 lg:block">
             <div className="sticky top-28">
               <div className="frame aspect-[4/5]">
-                <AnimatePresence mode="sync" initial={false}>
-                  <motion.div
-                    key={current.id}
-                    className="absolute inset-0"
-                    initial={reduce ? false : { opacity: 0, scale: 1.04 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.7, ease: EASE }}
-                  >
-                    <Image
-                      src={current.image}
-                      alt={current.imageAlt}
-                      fill
-                      sizes="(min-width: 1536px) 570px, 40vw"
-                      className="object-cover"
-                    />
-                  </motion.div>
-                </AnimatePresence>
-                <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-5">
+                {services.map((s, i) => {
+                  const isCurrent = i === active
+                  return (
+                    <motion.div
+                      key={s.id}
+                      className="absolute inset-0"
+                      aria-hidden={!isCurrent}
+                      initial={false}
+                      animate={reduce ? { opacity: isCurrent ? 1 : 0 } : { opacity: isCurrent ? 1 : 0, scale: isCurrent ? 1 : 1.04 }}
+                      transition={{ duration: 0.7, ease: EASE }}
+                      style={{ zIndex: isCurrent ? 1 : 0 }}
+                    >
+                      <Image
+                        src={s.image}
+                        alt={isCurrent ? s.imageAlt : ''}
+                        fill
+                        sizes="(min-width: 1536px) 570px, 40vw"
+                        className="object-cover"
+                      />
+                    </motion.div>
+                  )
+                })}
+                <div className="absolute inset-x-0 bottom-0 z-10 flex items-center justify-between p-5">
                   <span className="eyebrow rounded-full border border-line bg-ink/60 px-3 py-2 text-fg backdrop-blur-md">
                     0{active + 1} / 0{services.length}
                   </span>

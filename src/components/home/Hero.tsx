@@ -33,27 +33,27 @@ export default function Hero() {
       />
 
       <div className="container-x relative pt-32 md:pt-44">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-8 xl:col-span-7">
-            <motion.p className="eyebrow flex items-center gap-3" {...fade(0.05)}>
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-              Design &amp; development studio
-            </motion.p>
+        <motion.p className="eyebrow flex items-center gap-3" {...fade(0.05)}>
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
+          Design &amp; development studio
+        </motion.p>
 
-            <TextReveal
-              as="h1"
-              trigger="mount"
-              delay={0.15}
-              text="Digital products designed and engineered to move businesses forward."
-              className="mt-8 max-w-[14ch] text-display"
-            />
+        <TextReveal
+          as="h1"
+          trigger="mount"
+          delay={0.15}
+          text="Digital products designed and engineered to move businesses forward."
+          className="mt-8 max-w-[26ch] text-display"
+        />
 
-            <motion.p className="mt-8 max-w-[44ch] text-body-lg text-fg-muted" {...fade(0.6)}>
+        <div className="mt-10 grid gap-12 lg:grid-cols-12 lg:gap-8 md:mt-14">
+          <div className="lg:col-span-7">
+            <motion.p className="max-w-[46ch] text-body-lg text-fg-muted" {...fade(0.6)}>
               Pirmada is a design and development studio. We partner with founders and established teams to design,
               build and launch websites, apps and brands that hold up to scrutiny.
             </motion.p>
 
-            <motion.div className="mt-10 flex flex-wrap items-center gap-4" {...fade(0.75)}>
+            <motion.div className="mt-8 flex flex-wrap items-center gap-4" {...fade(0.75)}>
               <ButtonLink href="/contact" variant="accent" size="lg" arrow>
                 Start a project
               </ButtonLink>
@@ -64,7 +64,7 @@ export default function Hero() {
           </div>
 
           <motion.dl
-            className="grid grid-cols-2 gap-x-6 gap-y-8 self-end text-small sm:grid-cols-4 lg:col-span-4 lg:grid-cols-2 xl:col-span-5"
+            className="grid grid-cols-2 gap-x-6 gap-y-8 self-end text-small sm:grid-cols-4 lg:col-span-5 lg:grid-cols-2"
             {...fade(0.9)}
           >
             {[
@@ -82,9 +82,9 @@ export default function Hero() {
         </div>
 
         {/* Work stage */}
-        <div className="relative mt-16 h-[52vw] max-h-[640px] min-h-[260px] md:mt-24">
+        <div className="relative mt-14 h-[64vw] max-h-[640px] min-h-[240px] md:mt-24 md:h-[52vw]">
           <motion.div
-            className="frame absolute left-0 top-0 w-[78%] md:w-[70%]"
+            className="frame absolute left-0 top-0 w-[88%] md:w-[70%]"
             style={{ y: yBack }}
             initial={reduce ? false : { opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,13 +94,13 @@ export default function Hero() {
               src={scicastCover}
               alt="SciCast article platform shown on a tablet"
               priority
-              sizes="(min-width: 1536px) 1075px, (min-width: 768px) 70vw, 78vw"
+              sizes="(min-width: 1536px) 1075px, (min-width: 768px) 70vw, 88vw"
               className="aspect-[16/10] h-auto w-full object-cover"
             />
           </motion.div>
 
           <motion.div
-            className="frame absolute bottom-0 right-0 w-[48%] shadow-[0_40px_120px_-20px_rgba(0,0,0,0.8)] md:w-[38%]"
+            className="frame absolute bottom-0 right-0 w-[54%] shadow-[0_40px_120px_-20px_rgba(0,0,0,0.8)] md:w-[38%]"
             style={{ y: yFront }}
             initial={reduce ? false : { opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export default function Hero() {
               src={syncCover}
               alt="SYNC social app screens"
               priority
-              sizes="(min-width: 1536px) 584px, (min-width: 768px) 38vw, 48vw"
+              sizes="(min-width: 1536px) 584px, (min-width: 768px) 38vw, 54vw"
               className="aspect-[4/3] h-auto w-full object-cover"
             />
           </motion.div>

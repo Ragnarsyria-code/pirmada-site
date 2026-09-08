@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import Reveal from '@/components/motion/Reveal'
 import TextReveal from '@/components/motion/TextReveal'
 import WebPageJsonLd from '@/components/seo/WebPageJsonLd'
-import { ButtonLink } from '@/components/ui/Button'
 import DesignShots from '@/components/work/DesignShots'
 import ProjectFeature from '@/components/work/ProjectFeature'
 import { projects } from '@/content/projects'
@@ -69,15 +68,6 @@ export default function WorkPage() {
       </section>
 
       <DesignShots />
-
-      <section className="border-t border-line">
-        <div className="container-x section-y-sm flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <p className="max-w-[36ch] text-h4 text-fg">Want to see how we would approach your project?</p>
-          <ButtonLink href="/contact" variant="primary" arrow>
-            Tell us about it
-          </ButtonLink>
-        </div>
-      </section>
     </>
   )
 }

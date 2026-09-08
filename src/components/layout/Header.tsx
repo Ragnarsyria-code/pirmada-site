@@ -104,9 +104,15 @@ export default function Header() {
             </ul>
 
             <div className="hidden md:block">
-              <Link href="/contact" className="btn btn-primary btn-sm">
-                Start a project
-              </Link>
+              {pathname === '/contact' ? (
+                <a href={`mailto:${site.email}`} className="btn btn-secondary btn-sm">
+                  {site.email}
+                </a>
+              ) : (
+                <Link href="/contact" className="btn btn-primary btn-sm">
+                  Start a project
+                </Link>
+              )}
             </div>
 
             <button

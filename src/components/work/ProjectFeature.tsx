@@ -28,8 +28,8 @@ export default function ProjectFeature({ project, index, flip, priority }: Props
           />
         </div>
         {shot ? (
-          <div className="mt-4 grid grid-cols-12 gap-4">
-            <div className={`frame col-span-8 aspect-[16/9] ${flip ? 'col-start-5' : ''}`}>
+          <figure className="mt-4 grid grid-cols-12 gap-4">
+            <div className={`frame col-span-12 aspect-[16/9] sm:col-span-8 ${flip ? 'sm:col-start-5' : ''}`}>
               <Image
                 src={shot.src}
                 alt={shot.alt}
@@ -38,10 +38,16 @@ export default function ProjectFeature({ project, index, flip, priority }: Props
                 className="object-cover object-top"
               />
             </div>
-            <div className="col-span-4 flex items-end">
-              <p className="eyebrow max-w-[16ch] leading-relaxed">{shot.alt}</p>
-            </div>
-          </div>
+            <figcaption
+              className={`col-span-12 flex items-center gap-3 sm:col-span-4 sm:row-start-1 ${
+                flip ? 'sm:col-start-1 sm:justify-start' : 'sm:col-start-9 sm:justify-end'
+              } self-end`}
+            >
+              <span className="eyebrow">Detail</span>
+              <span className="h-px w-6 bg-line-strong" aria-hidden="true" />
+              <span className="eyebrow">{String(index + 1).padStart(2, '0')}.1</span>
+            </figcaption>
+          </figure>
         ) : null}
       </Reveal>
 
