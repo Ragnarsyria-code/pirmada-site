@@ -43,7 +43,6 @@ export const projects: Project[] = [
     cover: scicastCover,
     coverAlt: 'SciCast article page shown on a tablet resting on dark textured stone',
     shots: [{ src: scicast01, alt: 'SciCast homepage layout with featured technology articles' }],
-    href: 'https://www.sci-cast.com/',
     featured: true,
   },
   {
@@ -58,7 +57,6 @@ export const projects: Project[] = [
     cover: pentaCover,
     coverAlt: 'Penta Real Estate website homepage on a laptop set against dark rock',
     shots: [{ src: penta01, alt: 'Penta Real Estate journey section with Dubai skyline photography' }],
-    href: 'https://pentaskyline.com/',
     featured: true,
   },
   {

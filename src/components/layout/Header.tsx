@@ -25,6 +25,8 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const lastY = useRef(0)
   const toggleRef = useRef<HTMLButtonElement>(null)
+  const headerRef = useRef<HTMLElement>(null)
+  const menuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const onScroll = () => {
@@ -48,10 +50,32 @@ export default function Header() {
     if (!open) return
     const prev = document.body.style.overflow
     document.body.style.overflow = 'hidden'
+    const focusables = () => {
+      const roots = [headerRef.current, menuRef.current].filter(Boolean) as HTMLElement[]
+      return roots.flatMap((root) =>
+        Array.from(root.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')).filter(
+          (el) => el.offsetParent !== null,
+        ),
+      )
+    }
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         close()
         toggleRef.current?.focus()
+        return
+      }
+      if (e.key !== 'Tab') return
+      const items = focusables()
+      if (items.length === 0) return
+      const first = items[0]
+      const last = items[items.length - 1]
+      const current = document.activeElement as HTMLElement | null
+      if (e.shiftKey && (current === first || !current || !items.includes(current))) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && (current === last || !current || !items.includes(current))) {
+        e.preventDefault()
+        first.focus()
       }
     }
     window.addEventListener('keydown', onKey)
@@ -71,6 +95,7 @@ export default function Header() {
       </a>
 
       <motion.header
+        ref={headerRef}
         className="fixed inset-x-0 top-0 z-50"
         animate={{ y: hidden ? '-100%' : '0%' }}
         transition={{ duration: reduce ? 0 : 0.5, ease: EASE }}
@@ -144,7 +169,11 @@ export default function Header() {
       <AnimatePresence>
         {open ? (
           <motion.div
+            ref={menuRef}
             id={menuId}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu"
             className="fixed inset-0 z-40 flex flex-col bg-ink pt-24 md:hidden"
             initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
