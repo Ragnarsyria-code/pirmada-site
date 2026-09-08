@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Link } from 'next-view-transitions'
 
 import Reveal from '@/components/motion/Reveal'
 import { ArrowIcon } from '@/components/ui/Button'
@@ -20,12 +21,9 @@ const aspectClass = {
 }
 
 export default function ProjectCard({ project, index, aspect = 'standard', sizes, priority, delay = 0 }: Props) {
-  const Wrapper = project.href ? 'a' : 'div'
-  const wrapperProps = project.href ? { href: project.href, target: '_blank', rel: 'noopener noreferrer' } : {}
-
   return (
     <Reveal as="article" delay={delay} className="group">
-      <Wrapper {...wrapperProps} className="block rounded-lg outline-offset-4">
+      <Link href={`/work#${project.slug}`} className="block rounded-lg outline-offset-4">
         <div className={`frame ${aspectClass[aspect]}`}>
           <Image
             src={project.cover}
@@ -39,11 +37,9 @@ export default function ProjectCard({ project, index, aspect = 'standard', sizes
             <span className="eyebrow rounded-full border border-line bg-ink/60 px-3 py-2 text-fg backdrop-blur-md">
               {project.platform}
             </span>
-            {project.href ? (
-              <span className="flex h-11 w-11 translate-y-2 items-center justify-center rounded-full bg-fg text-ink opacity-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0 group-hover:opacity-100">
-                <ArrowIcon className="h-4 w-4 -rotate-45" />
-              </span>
-            ) : null}
+            <span className="flex h-11 w-11 translate-y-2 items-center justify-center rounded-full bg-fg text-ink opacity-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100">
+              <ArrowIcon className="h-4 w-4" />
+            </span>
           </div>
         </div>
 
@@ -64,7 +60,7 @@ export default function ProjectCard({ project, index, aspect = 'standard', sizes
             </ul>
           </div>
         </div>
-      </Wrapper>
+      </Link>
     </Reveal>
   )
 }

@@ -15,7 +15,10 @@ export default function ProjectFeature({ project, index, flip, priority }: Props
   const shot = project.shots?.[0]
 
   return (
-    <article className="group grid gap-8 border-t border-line py-12 md:py-16 lg:grid-cols-12 lg:gap-8">
+    <article
+      id={project.slug}
+      className="group grid scroll-mt-20 gap-8 border-t border-line py-12 md:py-16 lg:grid-cols-12 lg:gap-8"
+    >
       <Reveal className={`lg:col-span-8 ${flip ? 'lg:order-2' : ''}`}>
         <div className="frame aspect-[16/11] sm:aspect-[16/10]">
           <Image
