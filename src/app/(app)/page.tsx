@@ -1,48 +1,34 @@
-// app/page.tsx
 import type { Metadata } from 'next'
-import { WebPageJsonLd } from '@/components/SEO/WebPageJsonLd'
-import Hero from '@/components/ui/Hero'
-import AboutBentoGrid from '@/components/ui/Services/AboutBentoGrid'
-import Features from '@/components/ui/Features/FeaturesDesktop'
-import ContactSection from '@/components/ui/Contact/Form'
 
+import Approach from '@/components/home/Approach'
+import Clients from '@/components/home/Clients'
+import Hero from '@/components/home/Hero'
+import Principles from '@/components/home/Principles'
+import SelectedWork from '@/components/home/SelectedWork'
+import ServicesList from '@/components/home/ServicesList'
+import WebPageJsonLd from '@/components/seo/WebPageJsonLd'
+import { site } from '@/content/site'
+
+const title = 'Pirmada — Design & development studio'
 
 export const metadata: Metadata = {
-  title: 'PIRMADA | Creative Design and Development Agency',
-  description:
-    'Pirmada is a premium creative agency helping brands ignite vision and elevate their digital presence with expert design & development.',
-  openGraph: {
-    url: '/',
-    title: 'PIRMADA | Creative Design and Development Agency',
-    siteName: 'PIRMADA',
-    description:
-      'Pirmada is a premium creative agency helping brands ignite vision and elevate their digital presence with expert design & development.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'PIRMADA Logo' }],
-  },
+  title: { absolute: title },
+  description: site.description,
+  alternates: { canonical: '/' },
+  openGraph: { url: '/', title, description: site.description },
+  twitter: { title, description: site.description },
 }
 
 export default function HomePage() {
-  // Assert to TS that this is a string
-  const titleString = metadata.title as string
-  const desc = metadata.description!
-
   return (
     <>
-      <WebPageJsonLd
-        name={titleString}
-        description={desc}
-        url="https://pirmada.com/"
-      />
-
-      <p style={{ display: 'none' }}>{desc}</p>
-
-      
-      
-
+      <WebPageJsonLd name={title} description={site.description} path="/" />
       <Hero />
-      <AboutBentoGrid />
-      <Features />
-      <ContactSection />
+      <Clients />
+      <SelectedWork />
+      <ServicesList />
+      <Principles />
+      <Approach />
     </>
   )
 }
